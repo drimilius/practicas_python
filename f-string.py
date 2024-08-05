@@ -12,4 +12,6 @@ print(f"el total de tu compra es: ${precio1 + precio2}")
 temperatura = 30
 print(f"La temperatura es esta {"alta" if temperatura >25 else "baja"}")
 
+#imprimir una lleva dentro de un fstring
+print(f"esta un texto con llaves{{esta va dentro de llaves}}")
 
