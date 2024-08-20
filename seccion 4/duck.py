@@ -1,5 +1,5 @@
 #duck
-Vamos a pasar este codigo, usando herencia , usando atributos, usand property, usan polimorimifismo,  o inicializador
+#Vamos a pasar este codigo, usando herencia , usando atributos, usand property, usan polimorimifismo,  o inicializador
 
 class Figuras:
     def calcular_perimetro():
