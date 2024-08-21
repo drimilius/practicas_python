@@ -1,0 +1,6 @@
+python
+guardar
+caminar
+comer
+dormir
+contar

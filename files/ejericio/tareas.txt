@@ -1,0 +1,6 @@
+limpiar
+guardar
+caminar
+comer
+dormir
+contar

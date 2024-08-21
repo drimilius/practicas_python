@@ -10,7 +10,21 @@ with open("files/ejemplo.txt","r") as file:
 with open("files/ejemplo.txt","a") as file:
     file.write("\nEsta es la cuarta línea agregada.")
     file.write("\nEsta es la quinta línea agregada.")
-    
+
+
+#manejo de errores
 with open("files/ejemplo.txt","r") as file:
+    try:
+        contenido = file.read()
+        print(contenido)
     
-    print(file.read())
+    except FileNotFoundError:
+        print("No se encuentra este archivo.") 
+        print(file.read())
+        
+with open("files/ejemplo.txt","r") as file:
+    contador = 0
+    for linea in file:
+        contador += 1
+        #print(f"El archivio tiene: {linea.strip()} lineas")
+    print(contador)
