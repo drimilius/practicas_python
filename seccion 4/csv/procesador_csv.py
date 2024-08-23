@@ -1,4 +1,6 @@
 import csv
+import os
+
 class ProcesadorCsv:
     def __init__(self, archivo_entrada, archivo_salida):
         self.archivo_entrada = archivo_entrada
@@ -9,4 +11,22 @@ class ProcesadorCsv:
         with open(self.archivo_entrada, mode="r") as file:
             reader = csv.DictReader(file)
             self.datos = [fila for fila in reader]
-            
+
+    def calcular_promedio_general(self):
+        total_promedio = sum(float(estudiante['Promedio']) for estudiante in self.datos)
+        cantidad_estudiante = len(self.datos)
+        return total_promedio / cantidad_estudiante if cantidad_estudiante > 0 else 0
+
+    def guardar_resumen(self):
+        promedio_general = self.calcular_promedio_general()
+        with open(self.archivo_salida, mode="w", newline="") as file:
+            escritor = csv.writer(file)
+            escritor.writerow(["Promedio General", promedio_general])
+
+    def procesar(self):
+        self.leer_datos()
+        if self.datos:  # Solo continuar si se leyeron datos
+            self.guardar_resumen()
+
+procesador = ProcesadorCsv("seccion 4/csv/estudiantes.csv", "seccion 4/csv/resumen_estudiantes.csv")
+procesador.procesar()
