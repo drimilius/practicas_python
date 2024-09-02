@@ -1,5 +1,5 @@
 import csv
-
+#parte 3
 class Vehiculo:
     def __init__(self, marca, modelo, nro_ruedas):
         self.marca = marca
@@ -53,7 +53,7 @@ class Vehiculo:
             print(f"Error al leer los datos: {e}")
         return vehiculos
 
-
+#parte 1
 class Automovil(Vehiculo):
     def __init__(self, marca, modelo, nro_ruedas, velocidad, cilindrada):
         super().__init__(marca, modelo, nro_ruedas)
