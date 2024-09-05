@@ -1,5 +1,5 @@
 import csv
-#parte 3
+#parte 3 del consolidado 
 class Vehiculo:
     def __init__(self, marca, modelo, nro_ruedas):
         self.marca = marca
@@ -53,7 +53,7 @@ class Vehiculo:
             print(f"Error al leer los datos: {e}")
         return vehiculos
 
-#parte 1
+#parte 1 del consolidado
 class Automovil(Vehiculo):
     def __init__(self, marca, modelo, nro_ruedas, velocidad, cilindrada):
         super().__init__(marca, modelo, nro_ruedas)
@@ -101,7 +101,7 @@ class Motocicleta(Bicicleta):
     def __str__(self):
         return f"{super().__str__()} Motor: {self.motor}, Cuadro: {self.cuadro}, Nro Radios: {self.nro_radios}"
 
-
+#guardar los datos de los vehiculos
 def guardar_vehiculos():
     vehiculos = []
     n = int(input("¿Cuántos Vehículos desea insertar? "))
@@ -152,7 +152,7 @@ def guardar_vehiculos():
     for i, vehiculo in enumerate(vehiculos, 1):
         print(f"Datos del vehículo {i}: {vehiculo}")
 
-
+#menu
 def leer_vehiculos():
     print("\n¿Qué tipo de vehiculo desea ver?")
     print("1. Todos los vehículos")
